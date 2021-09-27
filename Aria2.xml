@@ -1,0 +1,94 @@
+<?xml version="1.0"?>
+<Container version="2">
+  <Name>Aria2-Pro</Name>
+  <Repository>p3terx/aria2-pro</Repository>
+  <Registry>https://hub.docker.com/r/p3terx/aria2-pro</Registry>
+  <Network>bridge</Network>
+  <MyIP/>
+  <Shell>sh</Shell>
+  <Privileged>false</Privileged>
+  <Support/>
+  <Project/>
+  <Overview>A perfect Aria2 Docker image. Out of the box, just add download tasks and don't need to think about anything else.</Overview>
+  <Category/>
+  <WebUI/>
+  <TemplateURL/>
+  <Icon>http://localhost/mnt/user/My_Media/Picture/Unraid/Aria2.png</Icon>
+  <ExtraParams>--log-opt max-size=1m</ExtraParams>
+  <PostArgs/>
+  <CPUset/>
+  <DateInstalled>1632751874</DateInstalled>
+  <DonateText/>
+  <DonateLink/>
+  <Description>A perfect Aria2 Docker image. Out of the box, just add download tasks and don't need to think about anything else.</Description>
+  <Networking>
+    <Mode>bridge</Mode>
+    <Publish>
+      <Port>
+        <HostPort>6800</HostPort>
+        <ContainerPort>6800</ContainerPort>
+        <Protocol>tcp</Protocol>
+      </Port>
+      <Port>
+        <HostPort>6888</HostPort>
+        <ContainerPort>6888</ContainerPort>
+        <Protocol>tcp</Protocol>
+      </Port>
+      <Port>
+        <HostPort>6888</HostPort>
+        <ContainerPort>6888</ContainerPort>
+        <Protocol>udp</Protocol>
+      </Port>
+    </Publish>
+  </Networking>
+  <Data>
+    <Volume>
+      <HostDir>/mnt/user/appdata/Aria2/config</HostDir>
+      <ContainerDir>/config</ContainerDir>
+      <Mode>rw</Mode>
+    </Volume>
+    <Volume>
+      <HostDir>/mnt/user/Downloads/Aria2</HostDir>
+      <ContainerDir>/downloads</ContainerDir>
+      <Mode>rw</Mode>
+    </Volume>
+  </Data>
+  <Environment>
+    <Variable>
+      <Value>1000</Value>
+      <Name>PUID</Name>
+      <Mode/>
+    </Variable>
+    <Variable>
+      <Value>1000</Value>
+      <Name>PGID</Name>
+      <Mode/>
+    </Variable>
+    <Variable>
+      <Value>531561</Value>
+      <Name>RPC_SECRET</Name>
+      <Mode/>
+    </Variable>
+    <Variable>
+      <Value>6800</Value>
+      <Name>RPC_PORT</Name>
+      <Mode/>
+    </Variable>
+    <Variable>
+      <Value>6888</Value>
+      <Name>LISTEN_PORT</Name>
+      <Mode/>
+    </Variable>
+  </Environment>
+  <Labels/>
+  <Config Name="RPC&#x76D1;&#x542C;&#x7AEF;&#x53E3;(&#x7ED1;&#x5B9A;)" Target="6800" Default="" Mode="tcp" Description="&#x5BB9;&#x5668; Port: 6800" Type="Port" Display="always" Required="true" Mask="false">6800</Config>
+  <Config Name="BT&#x76D1;&#x542C;&#x7AEF;&#x53E3;(TCP)" Target="6888" Default="" Mode="tcp" Description="&#x5BB9;&#x5668; Port: 6888" Type="Port" Display="always" Required="true" Mask="false">6888</Config>
+  <Config Name="BT&#x76D1;&#x542C;&#x7AEF;&#x53E3;(UDP)" Target="6888" Default="" Mode="udp" Description="&#x5BB9;&#x5668; Port: 6888" Type="Port" Display="always" Required="true" Mask="false">6888</Config>
+  <Config Name="PUID" Target="PUID" Default="" Mode="" Description="&#x5BB9;&#x5668; Variable: PUID" Type="Variable" Display="always" Required="true" Mask="false">1000</Config>
+  <Config Name="PGID" Target="PGID" Default="" Mode="" Description="&#x5BB9;&#x5668; Variable: PGID" Type="Variable" Display="always" Required="true" Mask="false">1000</Config>
+  <Config Name="RPC&#x76D1;&#x542C;&#x5BC6;&#x7801;" Target="RPC_SECRET" Default="" Mode="" Description="&#x5BB9;&#x5668; Variable: RPC_SECRET" Type="Variable" Display="always" Required="true" Mask="false">531561</Config>
+  <Config Name="RPC&#x76D1;&#x542C;&#x7AEF;&#x53E3;" Target="RPC_PORT" Default="" Mode="" Description="&#x5BB9;&#x5668; Variable: RPC_PORT" Type="Variable" Display="always" Required="true" Mask="false">6800</Config>
+  <Config Name="&#x76D1;&#x542C;&#x7AEF;&#x53E3;" Target="LISTEN_PORT" Default="" Mode="" Description="&#x5BB9;&#x5668; Variable: LISTEN_PORT" Type="Variable" Display="always" Required="true" Mask="false">6888</Config>
+  <Config Name="Config" Target="/config" Default="" Mode="rw" Description="&#x5BB9;&#x5668; Path: /config" Type="Path" Display="always" Required="true" Mask="false">/mnt/user/appdata/Aria2/config</Config>
+  <Config Name="&#x4E0B;&#x8F7D;&#x8DEF;&#x5F84;" Target="/downloads" Default="" Mode="rw" Description="&#x5BB9;&#x5668; Path: /downloads" Type="Path" Display="always" Required="true" Mask="false">/mnt/user/Downloads/Aria2</Config>
+</Container>
